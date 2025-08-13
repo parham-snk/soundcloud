@@ -1,0 +1,230 @@
+:root {
+    --primary: #ffffff;
+    --darkred: #8B0000;
+    --lightred: #C21807;
+    --brownred: #B22222;
+    --grey: #cecece;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    background-color: ghostwhite;
+    position: relative !important;
+
+
+}
+
+nav {
+    background-color: #ffffff;
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 0 5px gainsboro;
+    z-index: 1;
+
+    ul {
+        li {
+            margin: 0 15px !important;
+
+            a {
+                color: rgb(89, 89, 89);
+
+                &:hover {
+                    color: rgb(0, 0, 0) !important;
+                    text-shadow: 0 0 5px white;
+
+                }
+            }
+
+            .active {
+                border-radius: 12px 12px 0 0;
+                padding: 10px;
+                padding-bottom: 50px;
+                color: var(--lightred);
+                background-color: var(--primary);
+
+                &:hover {
+                    color: red !important;
+                    text-shadow: none !important;
+                }
+            }
+        }
+    }
+
+    .logo {
+        img {
+            width: 60px;
+        }
+    }
+}
+
+.c {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 100vh;
+    position: relative !important;
+    z-index: 0;
+
+    .hero {
+        position: relative;
+        width: 100% !important;
+        height: 100vh !important;
+        overflow: hidden;
+        left: 0 !important;
+        overflow: hidden;
+
+
+
+        img {
+            width: 100% !important;
+            position: relative;
+
+
+
+        }
+    }
+
+    .form {
+
+        figure,
+        figcaption {
+            background-color: ghostwhite !important;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            transition: .3s;
+            box-shadow: 0 3px 5px rgba(128, 128, 128, 0.254) !important;
+
+            &:hover {
+                scale: 1.1;
+                box-shadow: 0 3px 15px rgba(128, 128, 128, 0.448) !important;
+            }
+
+            &:focus {
+                scale: 1.1;
+                box-shadow: 0 3px 15px rgba(128, 128, 128, 0.448) !important;
+
+            }
+        }
+
+        .auth {
+            a {
+                padding: 15px;
+                font-size: x-large;
+                color: gray;
+                transition: .1s;
+                margin: 0 5px;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    section {
+        position: relative;
+        width: 75% !important;
+        top: 80px;
+        background-color: white;
+
+        .gens {
+            h3{
+                font-size: x-small !important;
+            }
+            a {
+                img {
+                    width: 200px;
+                    box-shadow: 0 0 5px gainsboro;
+                    border-radius: 16px;
+                    margin: 5px 10px;
+                    transition: .3s;
+                }
+
+                &:hover>img {
+                    scale: 1.05;
+                }
+
+                &:last-child {
+                    height: 200px !important;
+                    font-size: xx-large;
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .artists {
+            h3{
+                font-size: x-small !important;
+            }
+            a {
+                color: black;
+                transition: .3s;
+                &:hover{
+                    scale: 1.05;
+                }
+                figure {
+                    width: 200px !important;
+                    height: 210px;
+                    box-shadow:  0 0 5px gainsboro;
+                    border-radius: 16px;
+                    margin: 0 15px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+
+                    img {
+                        width: 100px;
+                        box-shadow: 0 0 5px gainsboro;
+                        border-radius: 50%;
+                        margin: 5px 10px;
+                        transition: .3s;
+                    }
+
+                    figcaption {
+                        font-size: large;
+                        padding: 15px;
+                        padding-top: 30px;
+                        justify-self: end;
+                    }
+
+                }
+
+                &:last-child {
+                    width: 200px !important;
+                    height: 200px !important;
+                    font-size: xx-large;
+                    transition: .3s;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
