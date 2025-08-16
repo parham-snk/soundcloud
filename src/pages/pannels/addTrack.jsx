@@ -1,10 +1,12 @@
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Section from "../components/section"
 import TagEle from "../components/tag"
 import { Image, FileMusic } from "react-bootstrap-icons"
 import axios from "axios"
+import { Context } from "../context/context"
 const AddTrack = props => {
+    const { audio, setAudio, playAudio, pauseAudio } = useContext(Context)
     const [name, setName] = useState(null)
     const [image, setImage] = useState(null)
     const [track, setTrack] = useState(null)
@@ -19,7 +21,7 @@ const AddTrack = props => {
         formData.set("name", name)
         formData.set("image", imgFile)
         formData.set("track", audioFile)
-        axios.post("http://192.168.1.243:8080/upload", formData).then(res => console.log(formData))
+        axios.post("http://localhost:8080/upload", formData).then(res => console.log(formData))
     }
     return (
         <Section>
@@ -56,9 +58,25 @@ const AddTrack = props => {
             {
                 track &&
                 <div className="d-flex">
-                    <audio src={track} controls className="" ></audio>
-                    <button onClick={() => {
+                    <button onClick={async () => {
+                        await setAudio({
+                            name: name,
+                            image,
+                            status: true,
+                            url: track
+                        })
+                        playAudio()
+                    }}>start music</button>
+                    <button onClick={async() => {
                         setTrack(null)
+                        playAudio()
+
+                        await setAudio({
+                            name: null,
+                            image:null,
+                            status: false,
+                            url: null
+                        })
                     }}>remove audio</button>
                 </div>
             }

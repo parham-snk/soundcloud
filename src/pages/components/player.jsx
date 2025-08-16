@@ -1,17 +1,30 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { DiscFill, Pause, PlayFill, VolumeMuteFill, VolumeOff, VolumeDown, ListUl } from "react-bootstrap-icons"
 import { Link } from "react-router-dom"
+import { Context } from "../context/context"
 const Player = props => {
-    const [play, setPlay] = useState(true)
-    const [mute, setMute] = useState(false)
+    const { playAudio, pauseAudio, audio, muted } = useContext(Context)
+    const [play, setPlay] = useState(audio.status)
+    const [mute, setMute] = useState(true)
+
+    useEffect(() => {
+        setPlay(audio.status)
+    }, [audio])
+    useEffect(() => {
+        if (play) playAudio()
+        else pauseAudio()
+    }, [play])
+    useEffect(() => {
+        muted(mute)
+    }, [mute])
     useEffect(() => {
         document.getElementById("player").onmousedown = (e) => {
-            document.getElementById("player").onmousemove=(e)=>{
-                let x=e.pageX-(e.pageX+e.offsetX)
+            document.getElementById("player").onmousemove = (e) => {
+                let x = e.pageX - (e.pageX + e.offsetX)
                 console.log(x)
-                let y= e.pageY-(e.pageY-e.offsetY)
+                let y = e.pageY - (e.pageY - e.offsetY)
                 // document.getElementById("player").style.marginTop=`${y}px`
-                document.getElementById("player").style.left=`150px`
+                document.getElementById("player").style.left = `150px`
             }
         }
 
@@ -39,8 +52,8 @@ const Player = props => {
                     }
 
                     <Link>
-                        <p>martin gattix </p>
-                        <p>koma</p>
+                        <p>parham</p>
+                        <p>{audio.name}</p>
                     </Link>
 
                     <ListUl className="end-0 mt-2" />
@@ -50,7 +63,9 @@ const Player = props => {
                 <div id="player" className="d-flex flex-column justify-content-center align-items-center">
                     <DiscFill className="my-1" />
                     <PlayFill className="my-2 " onClick={() => {
-                        setPlay(true)
+                        if (audio.url) {
+                            setPlay(true)
+                        }
                     }} />
                     {
                         !mute &&
@@ -65,8 +80,8 @@ const Player = props => {
                         }} />
                     }
                     <Link className="rounded-5">
-                        <p>martin gattix </p>
-                        <p>koma</p>
+                        <p>parham</p>
+                        <p>{audio.name}</p>
                     </Link>
                     <ListUl className="end-0 mt-2" />
                 </div>
