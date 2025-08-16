@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 import { Facebook, Github, Google, Linkedin } from "react-bootstrap-icons"
 const Login = () => {
     return (
-        <div className="c d-flex flex-row justify-content-center align-items-center h-100 w-100 position-relative form">
-            <figure className="d-flex flex-row justify-content-center align-items-center border rounded-2 w-75 bg-white shadow overflow-hidden rounded">
+        <div className="c d-flex justify-content-center align-items-center h-100 w-100 position-relative form">
+            <figure className="d-flex  h-auto flex-column flex-md-row  justify-content-center align-items-center  border rounded-2 w-75 bg-white shadow overflow-hidden rounded">
                 <img src={require("./assets/login.jpg")} className="w-75" alt="" />
                 <figcaption className="bg-white w-25 h-100 d-flex flex-column justify-content-center align-items-center pt-5">
                     <input type="text" placeholder="username" className="border-0 w-75 text-center px-2 py-1 my-3 shadow rounded mt-5" />

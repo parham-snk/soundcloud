@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom"
 import Logo from "../../logo.svg"
 const NavBar = props => {
     return (
-        <nav className="d-flex flex-row justify-content-start align-items-center w-100 position-fixed overflow-hidden z-1 shadow p-1">
+        <nav className="d-flex flex-row justify-content-start align-items-center w-100 position-sticky top-0 overflow-hidden z-1 shadow p-1">
             <Link to={"/"} className="logo p-1">
                 <img src={Logo} alt="" className="" />
             </Link>
@@ -13,6 +13,9 @@ const NavBar = props => {
                 <li>
                     <NavLink to={"/login"}>login</NavLink>
 
+                </li>
+                <li>
+                    <NavLink to={"addTrack"}>add-track</NavLink>
                 </li>
             </ul>
         </nav>

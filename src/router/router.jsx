@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import Login from '../pages/login';
 import Register from '../pages/register';
 import AddTrack from '../pages/pannels/addTrack';
+import Player from '../pages/components/player';
 
 
 
@@ -11,6 +12,7 @@ const Router = props => {
     return (
         <BrowserRouter>
             <NavBar />
+            <Player/>
             <div className="c d-flex justify-content-center">
                 <Routes>
                     <Route path="/" Component={Home} />
