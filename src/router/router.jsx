@@ -11,7 +11,7 @@ const Router = props => {
     return (
         <BrowserRouter>
             <NavBar />
-            <div className="c d-flex justify-content-center">
+            <div className="d-flex justify-content-center w-100">
                 <Routes>
                     <Route path="/" Component={Home} />
                     <Route path='/login' Component={Login}/>
