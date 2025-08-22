@@ -39,7 +39,7 @@ const NavBar = props => {
                         {
                             search &&
                             <div className="res position-absolute start-25 w-50 rounded d-flex flex-column justify-content-start align-items-start p-3">
-                                <h6 className="border-bottom border-white w-100 pb-2">result for : {search}</h6>
+                                <h6 className="border-bottom border-white w-100 pb-2" style={{fontSize:13}}><span style={{ fontSize: "small" }} className="pe-2">result for:</span>  {search}</h6>
                                 <div className="d-flex flex-column overflow-y-scroll pe-2 scr">
                                     <p>tracks</p>
                                     <TrackAside />
