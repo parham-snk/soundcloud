@@ -4,6 +4,7 @@ import Section from "./components/section"
 import TrackSlider from "./components/trackSlider/track-slider"
 
 import ArtistAside from "./components/aside/artistFollow"
+import TrackAside from "./components/aside/trackAside"
 const Home = props => {
 
     return (
@@ -53,11 +54,44 @@ const Home = props => {
 
                         </div>
                         <div className="d-flex flex-column overflow-hidden ul">
+
+                            <ArtistAside />
+                            <ArtistAside />
+                            <ArtistAside />
+                            <ArtistAside />
+
+                        </div>
+                    </div>
+                    {/* likes */}
+                    <div className="d-flex flex-column justify-content-center align-items-start w-100 likes mt-5">
+                        <div className="d-flex flex-row justify-content-between align-items-center w-100">
+                            <h6>likes</h6>
+                            <Link style={{ fontSize: 12 }}>219 likes </Link>
+
+                        </div>
+                        <div className="d-flex flex-column overflow-hidden ul">
+
+                            <TrackAside />
+                            <TrackAside />
+                            <TrackAside />
+                            <TrackAside />
+
+                        </div>
+                    </div>
+
+                    {/* history */}
+                    <div className="d-flex flex-column justify-content-center align-items-start w-100 likes mt-5">
+                        <div className="d-flex flex-row justify-content-between align-items-center w-100">
+                            <h6>History</h6>
                             
-                            <ArtistAside/>
-                            <ArtistAside/>
-                            <ArtistAside/>
-                            <ArtistAside/>
+
+                        </div>
+                        <div className="d-flex flex-column overflow-hidden ul">
+
+                            <TrackAside />
+                            <TrackAside />
+                            <TrackAside />
+                            <TrackAside />
 
                         </div>
                     </div>

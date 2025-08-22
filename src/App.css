@@ -17,8 +17,17 @@
 a {
     color: white !important;
 }
-
+::-webkit-scrollbar{
+    width: 5px !important;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #C21807;
+    border-radius: 12px;
+}
 svg,
+a,
+img,
+div,
 p,
 h1,
 h2,
@@ -27,6 +36,8 @@ h4,
 h5,
 h6 {
     color: white;
+    user-select: none !important;
+
 }
 
 p {
@@ -86,11 +97,64 @@ nav {
                 border: 0;
                 outline: 0;
                 font-size: 15px;
+
             }
 
             svg {
                 cursor: pointer;
                 color: rgba(128, 128, 128, 0.644) !important;
+
+                &:hover {
+                    color: white !important;
+                }
+            }
+
+            .res {
+                height: 250px !important;
+                background-color: #0a0a0af5;
+                margin-top: 310px !important;
+                border: 1px solid white;
+
+                .scr{
+                    height: 80% !important;
+                    overflow-y: scroll !important;
+                    scrollbar-width: 1px  !important;
+                    ::-webkit-scrollbar{
+                        width: 5px !important;
+                    }
+                }
+                .TrackAside {
+                    width: 100% !important;
+                    margin: 2px 0 !important;
+                    justify-content: space-between !important;
+                    align-items: center !important;
+
+                    &>div {
+                        padding: 0 !important;
+                        overflow: hidden !important;
+                        width: 50px !important;
+                        height: 50px !important;
+                        border-radius: 16px;
+                        cursor: pointer;
+
+                        &:hover .t {
+                            opacity: 1;
+                        }
+
+                        .t {
+                            opacity: 0;
+                        }
+                    }
+
+                    img {
+                        width: 50px !important;
+                        padding: 0 !important;
+                    }
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
@@ -109,7 +173,7 @@ nav {
                 }
             }
 
-            ul {
+            &>ul {
                 box-sizing: border-box;
                 width: 140px;
                 left: 0 !important;
@@ -129,37 +193,32 @@ nav {
                     left: 0 !important;
                     padding: 0 !important;
                     margin: 0 !important;
-                    color: white;
+
 
 
                     svg {
                         font-size: 25px;
-
+                        color: grey;
+                        opacity: 1;
                     }
 
                     div {
                         font-size: 13px;
                         font-weight: bold;
+                        color: grey;
                     }
 
                     &:hover {
 
                         svg,
                         div {
-                            color: grey !important;
+                            color: rgb(255, 255, 255) !important;
                         }
 
-                        svg {
-                            color: grey !important;
 
-                        }
                     }
 
-                    a {
-                        svg {
-                            color: rgba(128, 128, 128, 0) !important;
-                        }
-                    }
+
                 }
             }
         }
@@ -308,6 +367,45 @@ aside {
             img {
                 width: 50px !important;
                 border-radius: 50%;
+            }
+        }
+    }
+
+    .likes {
+        .ul {
+            max-height: 200px !important;
+            overflow: hidden !important;
+        }
+
+        figure,
+        .TrackAside {
+            width: fit-content !important;
+            margin: 2px 0 !important;
+
+            &>div {
+                padding: 0 !important;
+                overflow: hidden !important;
+                width: 50px !important;
+                height: 50px !important;
+                border-radius: 16px;
+                cursor: pointer;
+
+                &:hover .t {
+                    opacity: 1;
+                }
+
+                .t {
+                    opacity: 0;
+                }
+            }
+
+            img {
+                width: 50px !important;
+                padding: 0 !important;
+            }
+
+            svg {
+                cursor: pointer;
             }
         }
     }

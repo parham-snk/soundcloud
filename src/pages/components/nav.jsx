@@ -3,6 +3,7 @@ import Logo from "../../logo.svg"
 
 import { Soundwave, Search, ChevronDown, PersonFillUp, Person, PersonFill, Heart, HeartFill, PlayFill, MusicNoteList, Broadcast, PersonAdd, PersonFillAdd, BellFill, Inbox, InboxFill } from 'react-bootstrap-icons'
 import { useState } from "react"
+import TrackAside from "./aside/trackAside"
 const NavBar = props => {
     const [search, setSearch] = useState()
     const [showProfile, setShowProfile] = useState(false)
@@ -33,8 +34,27 @@ const NavBar = props => {
                     <div className="searchBox position-relative d-flex mx-2 align-items-center justify-content-center">
                         <input type="text" onChange={e => {
                             setSearch(e.target.value)
-                        }} className="p-1 px-2 m-1 rounded-1 mx-3" placeholder="search" />
+                        }} className="p-1 px-2 m-1 rounded-1 mx-3 text-white" placeholder="search" />
                         <Search className="position-absolute end-0 me-4 text-opacity-75" onClick={searchFunc} />
+                        {
+                            search &&
+                            <div className="res position-absolute start-25 w-50 rounded d-flex flex-column justify-content-start align-items-start p-3">
+                                <h6 className="border-bottom border-white w-100 pb-2">result for : {search}</h6>
+                                <div className="d-flex flex-column overflow-y-scroll pe-2 scr">
+                                    <p>tracks</p>
+                                    <TrackAside />
+                                    <TrackAside />
+                                    <TrackAside />
+                                    <TrackAside />
+                                    <TrackAside />
+                                    <TrackAside />
+                                    <TrackAside />
+
+                                    <p className="mt-1 border-top pt-1">artist</p>
+                                </div>
+                            </div>
+                        }
+
                     </div>
                 </ul>
                 <li>
