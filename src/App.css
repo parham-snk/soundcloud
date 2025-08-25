@@ -14,6 +14,9 @@
     font-weight: lighter;
 }
 
+img{
+    background-color: #888 !important;
+}
 a {
     color: white !important;
 }
