@@ -29,8 +29,8 @@ img {
     background: linear-gradient(90deg, black,black,rgb(51, 51, 51) 30%,black, black) ;
     background-size: 400% 200%  !important;
     animation: imageLoading 2s 1s infinite linear forwards ;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 30px;
+    min-width: 30px;
 }
 
 
