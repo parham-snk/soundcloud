@@ -26,11 +26,12 @@
 }
 
 img {
-    background: linear-gradient(90deg, black,black,rgb(51, 51, 51) 30%,black, black) ;
+    background: linear-gradient(90deg, #000,#000,rgb(51, 51, 51) 30%,#000, #000) ;
     background-size: 400% 200%  !important;
     animation: imageLoading 2s 1s infinite linear forwards ;
-    min-height: 30px;
-    min-width: 30px;
+    min-height: 30px !important;
+    min-width: 30px !important;
+
 }
 
 
@@ -367,6 +368,7 @@ aside {
         figure {
             img {
                 width: 50px;
+                height: 50px;
                 border-radius: 50%;
 
             }
@@ -391,6 +393,7 @@ aside {
 
             img {
                 width: 50px !important;
+                height: 50px !important;
                 border-radius: 50%;
             }
         }
@@ -426,6 +429,7 @@ aside {
 
             img {
                 width: 50px !important;
+                height: 50px !important;
                 padding: 0 !important;
             }
 
