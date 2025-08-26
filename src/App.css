@@ -14,19 +14,37 @@
     font-weight: lighter;
 }
 
-img{
-    background-color: #888 !important;
+@keyframes imageLoading {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 130% 50%;
+    }
 }
+
+img {
+    background: linear-gradient(90deg, black,black,rgb(51, 51, 51) 30%,black, black) ;
+    background-size: 400% 200%  !important;
+    animation: imageLoading 2s 1s infinite linear forwards ;
+    min-height: 50px;
+    min-width: 50px;
+}
+
 a {
     color: white !important;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 3px !important;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: #C21807;
     border-radius: 12px;
 }
+
 svg,
 a,
 img,
@@ -118,14 +136,16 @@ nav {
                 margin-top: 310px !important;
                 border: 1px solid white;
 
-                .scr{
+                .scr {
                     height: 80% !important;
                     overflow-y: scroll !important;
-                    scrollbar-width: 1px  !important;
-                    ::-webkit-scrollbar{
+                    scrollbar-width: 1px !important;
+
+                    ::-webkit-scrollbar {
                         width: 5px !important;
                     }
                 }
+
                 .TrackAside {
                     width: 100% !important;
                     margin: 2px 0 !important;
