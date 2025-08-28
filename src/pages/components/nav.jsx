@@ -78,7 +78,7 @@ const NavBar = props => {
                     </div>
                     {
                         showProfile &&
-                        <ul className="position-absolute d-flex flex-column  justify-content-start align-content-start start-0 top-0" style={{background: "#111"}}>
+                        <ul className="position-absolute d-flex flex-column  justify-content-start align-content-start start-0 top-0" style={{background: "##111 !important"}}>
                             <li className="d-flex flex-row justify-content-start align-items-center p-1 start-0 w-100 overflow-hidden">
                                 <Link className="w-100 p-2 d-flex flex-row justify-content-start align-items-center">
                                     <PersonFill className="" />
@@ -134,7 +134,7 @@ const NavBar = props => {
                     </div>
                     {
                         showNotification &&
-                        <ul className="d-flex flex-column justify-content-start align-items-center px-2 h-100 rounded h-100" style={{background: "#111"}}>
+                        <ul className="d-flex flex-column justify-content-start align-items-center px-2 h-100 rounded h-100" style={{background: "##111 !important"}}>
                             <div className="p-2 py-1 d-flex flex-row justify-content-between align-items-center mt-2 w-100 ">
                                 <h3>Notification</h3>
                                 <Link>settings</Link>
@@ -183,7 +183,7 @@ const NavBar = props => {
 
                     {
                         showMessages &&
-                        <ul className="d-flex flex-column justify-content-start align-items-center px-2 h-100 rounded h-100" style={{background: "#111"}}>
+                        <ul className="d-flex flex-column justify-content-start align-items-center px-2 h-100 rounded h-100" style={{background: "#111 !important"}}>
                             <div className="p-2 py-1 d-flex flex-row justify-content-between align-items-center mt-2 w-100 ">
                                 <h3>messages</h3>
                             </div>
